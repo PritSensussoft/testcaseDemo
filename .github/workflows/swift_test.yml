@@ -15,8 +15,6 @@ jobs:
     - name: Force Xcode
       run: sudo xcode-select -switch /Applications/Xcode_11.4.1.app
       
-    - name: build 
-      uses: sersoft-gmbh/xcodebuild-action@v1.8.0
       
     - name: Xcode Test  
       uses: devbotsxyz/xcode-test@v1.1.0
