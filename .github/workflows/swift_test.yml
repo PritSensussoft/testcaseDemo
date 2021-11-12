@@ -12,10 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Force Xcode
-      run: sudo xcode-select -switch /Applications/Xcode_11.4.1.app
-      
-      
-    - name: Xcode Test  
-      uses: devbotsxyz/xcode-test@v1.1.0
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Build and Test
+      run: swift test
       
