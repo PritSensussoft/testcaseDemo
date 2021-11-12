@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C119B895-3C28-49CD-B953-2BE04B212B59"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ImplementTestCaseTests/ImplementTestCaseTests.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "testemailEmpty()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "80ECEA32-14B7-4019-AB2A-BD67C77CB43B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -34,6 +18,38 @@
             endingLineNumber = "31"
             landmarkName = "sendClick(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "80ECEA32-14B7-4019-AB2A-BD67C77CB43B - 656292ebf26dd178"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImplementTestCase.ViewController.sendClick(Any) -&gt; ()"
+                  moduleName = "ImplementTestCase"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Documents/UI/ImplementTestCase/ImplementTestCase/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "80ECEA32-14B7-4019-AB2A-BD67C77CB43B - 2e646fe7d9cff78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImplementTestCaseTests.ViewController.sendClick(Any) -&gt; ()"
+                  moduleName = "ImplementTestCaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Documents/UI/ImplementTestCase/ImplementTestCase/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "304">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
