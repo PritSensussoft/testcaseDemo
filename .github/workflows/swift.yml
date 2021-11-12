@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Unit_TestCase_Demo Build
-      run: swift build -v
+    - name:  Build
+      run: Unit_TestCase_Demo build -v
     - name: Run tests
       run: swift test -v
