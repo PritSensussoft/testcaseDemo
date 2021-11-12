@@ -6,12 +6,11 @@ on:
 
 jobs:
   build:
-
-    runs-on: macos-latest
+    name: Build
+    runs-on: ununtu-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name:  Build
-      run: Unit_TestCase_Demo build -v
+
     - name: Run tests
       run: swift test -v
