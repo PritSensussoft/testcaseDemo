@@ -3,8 +3,6 @@ name: Swift
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -13,7 +11,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build
+    - name: Unit_TestCase_Demo Build
       run: swift build -v
     - name: Run tests
       run: swift test -v
