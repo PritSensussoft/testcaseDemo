@@ -5,13 +5,19 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  build-and-test:
 
     runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: Force Xcode 11
-      run: sudo xcode-select -switch /Applications/Xcode_11.5.app
-    - name: GitHub Action for `swift test`
-      uses: 417-72KI/action-swift-test@master
+    
+    - name: Force Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_11.4.1.app
+      
+    - name: build 
+      uses: sersoft-gmbh/xcodebuild-action@v1.8.0
+      
+    - name: Xcode Test  
+      uses: devbotsxyz/xcode-test@v1.1.0
+      
