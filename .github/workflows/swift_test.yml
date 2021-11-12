@@ -1,0 +1,21 @@
+name: Swift CI test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Swift Setup
+    - uses: YOCKOW/Action-setup-swift@v1.1.14
+      with:
+       swift-version: 5.4 
+    - name: Run tests
+      run: swift test -v
