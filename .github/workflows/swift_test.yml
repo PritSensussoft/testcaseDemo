@@ -13,5 +13,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Force Xcode 11
       run: sudo xcode-select -switch /Applications/Xcode_11.5.app
-    - name: Run tests
-      run: swift test -v
+    - name: GitHub Action for `swift test`
+      uses: 417-72KI/action-swift-test@master
