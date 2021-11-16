@@ -5,10 +5,8 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  test:
     runs-on: macos-latest
-
     steps:
       - uses: actions/checkout@v2
       - name: GitHub Action for swift test
