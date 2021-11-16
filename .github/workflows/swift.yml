@@ -11,7 +11,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Build
-        run: swift build
-      - name: Run tests
-        run: swift test
+      
+      - name: GitHub Action for `swift test`
+        uses: 417-72KI/action-swift-test@master
