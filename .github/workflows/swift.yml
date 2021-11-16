@@ -10,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: GitHub Action for swift test
-        uses: 417-72KI/action-swift-test@master
+        uses: MaxDesiatov/swift-windows-action@v1
