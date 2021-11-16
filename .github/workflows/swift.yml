@@ -16,5 +16,4 @@ jobs:
       - name: iOS build setup
         run: >-
           xcodebuild test -workspace ImplementTestCase.xcodeproj/project.xcworkspace
-          -scheme ImplementTestCase -destination 'platform=iOS Simulator,name=iPhone
-          11,OS=13.7'
+          -scheme ImplementTestCase -destination
