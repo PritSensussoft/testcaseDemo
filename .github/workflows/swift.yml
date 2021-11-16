@@ -16,4 +16,3 @@ jobs:
       - name: iOS build setup
         run: >-
           xcodebuild test -workspace ImplementTestCase.xcodeproj/project.xcworkspace
-          -scheme ImplementTestCase -destination
