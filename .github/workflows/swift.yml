@@ -15,6 +15,6 @@ jobs:
         run: sudo xcode-select -switch /Applications/Xcode_11.7.app
       - name: iOS build setup
         run: >-
-          xcodebuild test -workspace TestApp.xcodeproj/project.xcworkspace
+          xcodebuild test -workspace ImplementTestCase.xcodeproj/project.xcworkspace
           -scheme TestApp -destination 'platform=iOS Simulator,name=iPhone
           11,OS=13.7'
