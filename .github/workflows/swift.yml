@@ -5,14 +5,11 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
-    name: Testing Swift Package and iOS app
-    runs-on: macOS-latest
+  build:
+
+    runs-on: macos-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v1
-      - name: Force Xcode 11
-        run: sudo xcode-select -switch /Applications/Xcode_11.7.app
-      - name: iOS build setup
-        run: >-
-          xcodebuild test -workspace ImplementTestCase.xcodeproj/project.xcworkspace
+      
+      - uses: actions/checkout@v1
+      - name: build
+      - run: swift build -v
