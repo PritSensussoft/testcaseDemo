@@ -8,7 +8,7 @@ class ImplementTestCaseTests: XCTestCase {
     //MARK:- TestCase Implement
     
     func testemailEmpty(){
-        let  result = vc.validLoginInput(email: "abc@gmail.com", passord: "Aa@12345")
+        let  result = vc.validLoginInput(email: "", passord: "Aa@12345")
         XCTAssertFalse(result)
     }
     
