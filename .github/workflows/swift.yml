@@ -12,5 +12,5 @@ jobs:
     - name: Force Xcode 11
       run: sudo xcode-select -switch /Applications/Xcode_11.3.app
     - name: Run tests
-      run: xcodebuild clean test -project "Unit_TestCase_Demo.xcodeproj" -scheme "Unit_TestCase_Demo" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
+      run: xcodebuild clean test -project "ImplementTestCase.xcodeproj.xcodeproj" -scheme "ImplementTestCase" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
 
