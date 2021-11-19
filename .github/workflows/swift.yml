@@ -10,5 +10,5 @@ jobs:
     - name: iOS
       run: |
         cd Unit_TestCase_Demo
-        nuget restore
-        msbuild Unit_TestCase_Demo.iOS/Unit_TestCase_Demo.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
+         name: Run unit tests
+         run: xcodebuild test -scheme YourProject -workspace YourProject.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.2' | xcpretty && exit ${PIPESTATUS[0]}
