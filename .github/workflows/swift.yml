@@ -1,6 +1,6 @@
 name: CI on Push and Pull Request
 
-on: [main]
+on: [push]
 
 jobs:
   iOS:
