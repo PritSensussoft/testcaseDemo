@@ -8,5 +8,5 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run tests
-      run: xcodebuild -project 'Unit_TestCase_Demo.xcodeproj' -scheme 'Unit_TestCase_Demo' -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.2' clean test
+      run: xcodebuild -project 'ImplementTestCase.xcodeproj' -scheme 'Unit_TestCase_Demo' -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max,OS=13.2' clean test
 
