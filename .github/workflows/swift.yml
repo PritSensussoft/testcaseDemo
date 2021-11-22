@@ -1,16 +1,26 @@
-name: Swift
+name: ImplementTestCase
 
-on: [main]
+on:
+  push:
+    branches: [ main ]
+  pull_request: 
+    branches: [ main ]
 
 jobs:
   build:
 
-    runs-on: macOS-latest
+    runs-on: [macos-11.2]
+    
+    env:
+      XC_VERSION: ${{ '12.5' }}
+      XC_WORKSPACE: ${{ 'iOSAPP.xcworkspace' }}
+      XC_SCHEME: ${{ 'iOSAPP' }}
+      XC_CONFIGURATION: ${{ 'Debug' }}
+      XC_ARCHIVE_PATH: ${{ './iOSAPP.xcarchive' }}
+      XC_EXPORT_PATH: ${{ './artifacts/' }}
+      XC_EXPORT_OPTIONS_FILE_PATH: ${{ './ExportOptions.plist' }}
 
     steps:
     - uses: actions/checkout@v1
-    - name: Force Xcode 11
-      run: sudo xcode-select -switch /Applications/Xcode_11.3.app
-    - name: Run tests
-      run: xcodebuild clean test -project "ImplementTestCase.xcodeproj" -scheme "ImplementTestCase" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
+
 
