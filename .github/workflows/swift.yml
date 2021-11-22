@@ -1,17 +1,16 @@
-name: CI
+name: Swift
 
-on:
-  push:
-    branches: [ main ]
+on: [main]
 
 jobs:
   build:
 
-    runs-on: macos-latest
+    runs-on: macOS-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Build
-        run: swift build
-      - name: Run tests
-        run: swift test
+    - uses: actions/checkout@v1
+    - name: Force Xcode 11
+      run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+    - name: Run tests
+      run: xcodebuild clean test -project "ImplementTestCase.xcodeproj" -scheme "ImplementTestCase" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
+
