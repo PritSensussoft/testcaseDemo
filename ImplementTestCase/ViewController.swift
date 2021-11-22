@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var txfEmail: UITextField!
     @IBOutlet weak var txfPass: UITextField!
     @IBOutlet weak var btnSend: UIButton!
@@ -17,21 +16,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblErrorPass: UILabel!
     
     let PASSWORD_REGEX = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[ ~!@#$%^&*+?\"'\\(\\),-/:;<=>\\[\\]_`^|{}\\\\])[A-Za-z\\d~!@#$%^&* +?\"'\\(\\),-/:;<=>\\[\\]_`\\\\^|{}]{8,30}$"
-    
     //MARK:- Override Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     //MARK:- OnClick Event
     
     @IBAction func sendClick(_ sender: Any) {
         lblTitle.isHidden = true
-        if !validLoginInput(email: txfEmail.text!, passord: txfPass.text!) == true{
+        if !validLoginInput(email: txfEmail.text!, password: txfPass.text!) == true{
             if txfEmail.text!.isEmpty || ((txfPass.text?.isEmpty) == nil){
                 lblTitle.isHidden = false
-                lblTitle.text = "please enter email"
+                
             }else if isValidEmail(emailAddressString: txfEmail.text!) == false {
                 lblTitle.isHidden = false
                 lblTitle.text = "please enter valid Email format"
@@ -93,14 +92,14 @@ class ViewController: UIViewController {
      * ...the email is not valid
      * ...the password contains less then 8 digits
      */
-    func validLoginInput(email:String,passord:String) -> Bool{
-        if(email.isEmpty || passord.isEmpty){
+    func validLoginInput(email:String,password:String) -> Bool{
+        if(email.isEmpty || password.isEmpty){
             return false
         }
         if isValidEmail(emailAddressString: email) == false{
             return false
         }
-        if isValidPassword(passord) == false {
+        if isValidPassword(password) == false {
             return false
         }
         return true
