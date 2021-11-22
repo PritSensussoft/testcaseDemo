@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblErrorPass: UILabel!
     
     let PASSWORD_REGEX = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[ ~!@#$%^&*+?\"'\\(\\),-/:;<=>\\[\\]_`^|{}\\\\])[A-Za-z\\d~!@#$%^&* +?\"'\\(\\),-/:;<=>\\[\\]_`\\\\^|{}]{8,30}$"
+    
     //MARK:- Override Methods
     
     override func viewDidLoad() {
