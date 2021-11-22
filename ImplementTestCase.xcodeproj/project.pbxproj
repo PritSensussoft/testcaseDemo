@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8803C630274BA1B2001B08FF /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8803C62F274BA1B2001B08FF /* ExportOptions.plist */; };
 		8837A404272A6D0A0075DD00 /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837A403272A6D0A0075DD00 /* SuccessVC.swift */; };
 		8892953A27290C720077E1C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892953927290C720077E1C4 /* AppDelegate.swift */; };
 		8892953C27290C720077E1C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892953B27290C720077E1C4 /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8803C62F274BA1B2001B08FF /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = ExportOptions.plist; sourceTree = SOURCE_ROOT; };
 		8837A403272A6D0A0075DD00 /* SuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
 		8892953627290C720077E1C4 /* ImplementTestCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImplementTestCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8892953927290C720077E1C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				8892954227290C740077E1C4 /* Assets.xcassets */,
 				8892954427290C740077E1C4 /* LaunchScreen.storyboard */,
 				8892954727290C740077E1C4 /* Info.plist */,
+				8803C62F274BA1B2001B08FF /* ExportOptions.plist */,
 				8837A403272A6D0A0075DD00 /* SuccessVC.swift */,
 			);
 			path = ImplementTestCase;
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8892954627290C740077E1C4 /* LaunchScreen.storyboard in Resources */,
+				8803C630274BA1B2001B08FF /* ExportOptions.plist in Resources */,
 				8892954327290C740077E1C4 /* Assets.xcassets in Resources */,
 				8892954127290C720077E1C4 /* Main.storyboard in Resources */,
 			);
