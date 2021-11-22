@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: [macos-10.5]
+    runs-on: [macos-11.2]
     
     env:
       XC_VERSION: ${{ '12.5' }}
@@ -19,6 +19,14 @@ jobs:
       XC_ARCHIVE_PATH: ${{ './iOSAPP.xcarchive' }}
       XC_EXPORT_PATH: ${{ './artifacts/' }}
       XC_EXPORT_OPTIONS_FILE_PATH: ${{ './ExportOptions.plist' }}
+      ENCRYPTED_CERTS_FILE_PATH: ${{ './github_action_dev_certificate_12345.p12.gpg' }}
+      DECRYPTED_CERTS_FILE_PATH: ${{ './github_action_dev_certificate_12345.p12' }}
+      ENCRYPTED_PROVISION_FILE_PATH: ${{ './provisioning.tar.gz.gpg' }}
+      DECRYPTED_PROVISION_FILE_PATH: ${{ './provisioning.tar.gz' }}
+      CERTS_ENCRYPTION_PWD: ${{ secrets.CERTS_ENCRYPTION_PWD }}
+      PROVISION_ENCRYPTION_PWD: ${{ secrets.PROVISION_ENCRYPTION_PWD }}
+      CERTS_EXPORT_PWD: ${{ secrets.CERTS_EXPORT_PWD }}
+      KEYCHAIN: ${{ 'test.keychain' }}
 
     steps:
     - uses: actions/checkout@v1
