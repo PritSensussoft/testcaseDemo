@@ -12,7 +12,7 @@ jobs:
     runs-on: [macos-10.15]
     
     env:
-      XC_VERSION: ${{ '12.5' }}
+      XC_VERSION: ${{ '2384' }}
       XC_WORKSPACE: ${{ 'iOSAPP.xcworkspace' }}
       XC_SCHEME: ${{ 'iOSAPP' }}
       XC_CONFIGURATION: ${{ 'Debug' }}
