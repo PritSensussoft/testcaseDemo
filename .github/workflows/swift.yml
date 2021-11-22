@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: [macos-10.5]
+    runs-on: [macos-10.15]
     
     env:
       XC_VERSION: ${{ '12.5' }}
