@@ -54,7 +54,7 @@ jobs:
           cp "./$PROVISION" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision"
         done
     - name: Testing iOS app
-      run: swift test -v
+      run: swift test -v -c release
     - name: Archive
       run: |
         mkdir artifacts
