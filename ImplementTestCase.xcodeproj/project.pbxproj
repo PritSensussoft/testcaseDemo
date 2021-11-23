@@ -46,7 +46,7 @@
 		1EE9B5EC5FB77E2D239A60D4 /* Pods-ImplementTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImplementTestCase.release.xcconfig"; path = "Target Support Files/Pods-ImplementTestCase/Pods-ImplementTestCase.release.xcconfig"; sourceTree = "<group>"; };
 		28B0488D797614ABE3C4B56E /* Pods-ImplementTestCase-ImplementTestCaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImplementTestCase-ImplementTestCaseUITests.debug.xcconfig"; path = "Target Support Files/Pods-ImplementTestCase-ImplementTestCaseUITests/Pods-ImplementTestCase-ImplementTestCaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5586A22841FCC52E1D57EBCC /* Pods_ImplementTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImplementTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8803C62F274BA1B2001B08FF /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ExportOptions.plist; path = ImplementTestCase/ExportOptions.plist; sourceTree = SOURCE_ROOT; };
+		8803C62F274BA1B2001B08FF /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ExportOptions.plist; sourceTree = SOURCE_ROOT; };
 		8837A403272A6D0A0075DD00 /* SuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
 		8892953627290C720077E1C4 /* ImplementTestCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImplementTestCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8892953927290C720077E1C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +109,7 @@
 		8892952D27290C720077E1C4 = {
 			isa = PBXGroup;
 			children = (
+				8803C62F274BA1B2001B08FF /* ExportOptions.plist */,
 				8892953827290C720077E1C4 /* ImplementTestCase */,
 				8892954F27290C740077E1C4 /* ImplementTestCaseTests */,
 				8892955A27290C740077E1C4 /* ImplementTestCaseUITests */,
@@ -137,7 +138,6 @@
 				8892953F27290C720077E1C4 /* Main.storyboard */,
 				8892954227290C740077E1C4 /* Assets.xcassets */,
 				8892954427290C740077E1C4 /* LaunchScreen.storyboard */,
-				8803C62F274BA1B2001B08FF /* ExportOptions.plist */,
 				8892954727290C740077E1C4 /* Info.plist */,
 				8837A403272A6D0A0075DD00 /* SuccessVC.swift */,
 			);

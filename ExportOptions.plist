@@ -8,7 +8,7 @@
 	<string>development</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>com.githubaction</key>
+		<key>com.testcase</key>
 		<string>Comman_development_profile</string>
 	</dict>
 	<key>signingCertificate</key>
