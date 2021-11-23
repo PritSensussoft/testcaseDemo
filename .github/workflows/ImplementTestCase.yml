@@ -13,9 +13,10 @@ jobs:
     
     env:
       XC_VERSION: ${{ '12.4' }}
+      XC_WORKSPACE: ${{ 'ImplementTestCase.xcworkspace' }}
       XC_SCHEME: ${{ 'ImplementTestCase' }}
       XC_CONFIGURATION: ${{ 'Debug' }}
-      XC_ARCHIVE_PATH: ${{ './ImplementTestCase.xcarchive' }}
+      XC_ARCHIVE_PATH: ${{ './ImplementTestCase 23-11-21, 11.25 AM.xcarchive' }}
       XC_EXPORT_PATH: ${{ './artifacts/' }}
       XC_EXPORT_OPTIONS_FILE_PATH: ${{ './ExportOptions.plist' }}
       ENCRYPTED_CERTS_FILE_PATH: ${{ './github_action_dev_certificate_12345.p12.gpg' }}
