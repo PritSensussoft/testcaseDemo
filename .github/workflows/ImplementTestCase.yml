@@ -53,6 +53,8 @@ jobs:
           UUID=`/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i ./$PROVISION)`
           cp "./$PROVISION" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision"
         done
+    - name: Run tests
+      run: swift test
     - name: Archive
       run: |
         mkdir artifacts
