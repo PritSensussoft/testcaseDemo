@@ -9,7 +9,7 @@
     <key>provisioningProfiles</key>
     <dict>
         <key>com.testcase</key>
-        <string>Comman_development_profile</string>
+        <string>github_action_dev_certificate_12345</string>
     </dict>
     <key>signingCertificate</key>
     <string>iPhone Developer</string>
