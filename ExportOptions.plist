@@ -8,7 +8,7 @@
     <string>development</string>
     <key>provisioningProfiles</key>
     <dict>
-        <key>com.testcase</key>
+        <key>com.githubaction</key>
         <string>Comman_development_profile</string>
     </dict>
     <key>signingCertificate</key>
@@ -16,7 +16,7 @@
     <key>signingStyle</key>
     <string>manual</string>
     <key>teamID</key>
-    <string>484M4FF45J</string>
+    <string>S2FW23GC97</string>
     <key>uploadBitcode</key>
     <false/>
     <key>uploadSymbols</key>

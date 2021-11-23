@@ -109,6 +109,7 @@
 		8892952D27290C720077E1C4 = {
 			isa = PBXGroup;
 			children = (
+				8803C62F274BA1B2001B08FF /* ExportOptions.plist */,
 				8892953827290C720077E1C4 /* ImplementTestCase */,
 				8892954F27290C740077E1C4 /* ImplementTestCaseTests */,
 				8892955A27290C740077E1C4 /* ImplementTestCaseUITests */,
@@ -138,7 +139,6 @@
 				8892954227290C740077E1C4 /* Assets.xcassets */,
 				8892954427290C740077E1C4 /* LaunchScreen.storyboard */,
 				8892954727290C740077E1C4 /* Info.plist */,
-				8803C62F274BA1B2001B08FF /* ExportOptions.plist */,
 				8837A403272A6D0A0075DD00 /* SuccessVC.swift */,
 			);
 			path = ImplementTestCase;
@@ -627,7 +627,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.testcase;
+				PRODUCT_BUNDLE_IDENTIFIER = com.githubaction;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Comman_development_profile;
 				SWIFT_VERSION = 5.0;
