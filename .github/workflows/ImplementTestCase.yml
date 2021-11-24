@@ -33,7 +33,7 @@ jobs:
       run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
     - uses: actions/checkout@v2
     - name: Test
-      run: ImplementTestCaseTests test
+      run: npm test
     - name: Configure Keychain
       run: |
         security create-keychain -p "" "$KEYCHAIN"
