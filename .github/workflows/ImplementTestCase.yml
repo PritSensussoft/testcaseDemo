@@ -1,4 +1,4 @@
-name: ImplementTestCase
+name: CI
 
 on:
   push:
