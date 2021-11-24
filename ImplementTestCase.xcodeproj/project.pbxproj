@@ -600,6 +600,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vinodbhai Kalathiya (484M4FF45J)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = S2FW23GC97;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = ImplementTestCase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -623,6 +624,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vinodbhai Kalathiya (484M4FF45J)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = S2FW23GC97;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = ImplementTestCase/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
