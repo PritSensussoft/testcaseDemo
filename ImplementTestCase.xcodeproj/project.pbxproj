@@ -21,6 +21,7 @@
 		8892955C27290C740077E1C4 /* ImplementTestCaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892955B27290C740077E1C4 /* ImplementTestCaseUITests.swift */; };
 		8892956B272955130077E1C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892953D27290C720077E1C4 /* ViewController.swift */; };
 		88929570272955A60077E1C4 /* ImplementTestCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892955027290C740077E1C4 /* ImplementTestCaseTests.swift */; };
+		88FD75AC274DE93E00C8A7BD /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8803C62F274BA1B2001B08FF /* ExportOptions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FD75AC274DE93E00C8A7BD /* ExportOptions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

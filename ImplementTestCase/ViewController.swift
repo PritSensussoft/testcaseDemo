@@ -42,21 +42,21 @@ class ViewController: UIViewController {
                 return
             }
         }
-//        lblTitle.isHidden = false
-//        lblTitle.text = "please enter email"
-//        if txfEmail.text == "" || txfEmail.text == nil {
-//            lblTitle.text = "Please Enter Email"
-//        } else if !isValidEmail(emailAddressString: txfEmail.text!) {
-//            lblTitle.text = "Please Enter Valid Email"
-//        } else if txfPass.text == "" || txfPass.text == nil {
-//            lblErrorPass.text = "Please Enter Password"
-//        } else if !isValidPassword(txfPass.text!) {
-//            lblErrorPass.text = "Please Enter Valid Password"
-//        } else {
-//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "SuccessVC") as! SuccessVC
-//            self.present(newViewController, animated: true, completion: nil)
-//        }
+        lblTitle.isHidden = false
+        lblTitle.text = "please enter email"
+        if txfEmail.text == "" || txfEmail.text == nil {
+            lblTitle.text = "Please Enter Email"
+        } else if !isValidEmail(emailAddressString: txfEmail.text!) {
+            lblTitle.text = "Please Enter Valid Email"
+        } else if txfPass.text == "" || txfPass.text == nil {
+            lblErrorPass.text = "Please Enter Password"
+        } else if !isValidPassword(txfPass.text!) {
+            lblErrorPass.text = "Please Enter Valid Password"
+        } else {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "SuccessVC") as! SuccessVC
+            self.present(newViewController, animated: true, completion: nil)
+        }
     }
     
     //MARK:- IsValid Email Formate
