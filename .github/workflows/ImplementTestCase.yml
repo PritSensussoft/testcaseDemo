@@ -27,27 +27,12 @@ jobs:
       PROVISION_ENCRYPTION_PWD: ${{ secrets.PROVISION_ENCRYPTION_PWD }}
       CERTS_EXPORT_PWD: ${{ secrets.CERTS_EXPORT_PWD }}
       KEYCHAIN: ${{ 'test.keychain' }}
-
-  test:
-    name: Test
-    runs-on: macOS-latest
-    strategy:
-      matrix:
-        destination: ['platform=iOS Simulator,OS=13.1,name=iPhone 8']
     steps:
     - name: Select latest Xcode
       run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
     - uses: actions/checkout@v2
     - name: Checkout
       uses: actions/checkout@master
-    - name: Testing
-      run: |
-          cd ProjectName
-          xcodebuild clean test -project ImplementTestCase.xcodeproj -scheme ImplementTestCase -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-          bash <(curl -s https://codecov.io/bash) -t "${CODECOV_TOKEN}"
-      env: 
-           destination: ${{ matrix.destination }}
-           CODECOV_TOKEN: ${{ secrets.codecov_token }}
     - name: Configure Keychain
       run: |
         security create-keychain -p "" "$KEYCHAIN"
