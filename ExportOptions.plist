@@ -9,14 +9,14 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.githubaction</key>
-		<string>Comman_deelopment_profile</string>
+		<string>github_action_dev_certificate_12345</string>
 	</dict>
 	<key>signingCertificate</key>
 	<string>iPhone Developer</string>
 	<key>signingStyle</key>
 	<string>manual</string>
 	<key>teamID</key>
-	<string>484M4FF45J</string>
+	<string>S2FW23GC97</string>
 	<key>uploadBitcode</key>
 	<false/>
 	<key>uploadSymbols</key>
