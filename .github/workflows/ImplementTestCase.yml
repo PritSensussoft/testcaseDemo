@@ -32,9 +32,6 @@ jobs:
     - name: Select latest Xcode
       run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
     - uses: actions/checkout@v2
-    - uses: fwal/setup-swift@d43a564349d1341cd990cfbd70d94d63b8899475
-    - name: Run tests
-      run: swift test
     - name: Configure Keychain
       run: |
         security create-keychain -p "" "$KEYCHAIN"
