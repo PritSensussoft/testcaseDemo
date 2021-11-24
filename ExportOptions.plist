@@ -9,7 +9,7 @@
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.githubaction</key>
-		<string>provisioning</string>
+		<string>Comman_development_profile</string>
 	</dict>
 	<key>signingCertificate</key>
 	<string>iPhone Developer</string>
