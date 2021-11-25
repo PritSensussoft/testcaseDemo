@@ -12,6 +12,7 @@ jobs:
     runs-on: [macos-10.15]
     
     env:
+      XC_TESTCASE: ${{ 'ImplementTestCaseTests' }}
       XC_VERSION: ${{ '12.4' }}
       XC_WORKSPACE: ${{ 'ImplementTestCase.xcworkspace' }}
       XC_SCHEME: ${{ 'ImplementTestCase' }}
@@ -59,7 +60,10 @@ jobs:
       run: |
         mkdir artifacts
         /usr/bin/xcodebuild archive -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -configuration "$XC_CONFIGURATION" -archivePath "$XC_ARCHIVE_PATH" "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN'"
- 
+    - name: Archive
+      run: |
+        mkdir artifacts
+        /usr/bin/xcodebuild archive -workspace "$XC_TESTCASE" -scheme "$XC_SCHEME" -configuration "$XC_CONFIGURATION" -archivePath "$XC_ARCHIVE_PATH" "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN'"
     - name: Export ipa
       run: |
         /usr/bin/xcodebuild -exportArchive -archivePath "$XC_ARCHIVE_PATH" -exportOptionsPlist "$XC_EXPORT_OPTIONS_FILE_PATH" -exportPath "$XC_EXPORT_PATH"
