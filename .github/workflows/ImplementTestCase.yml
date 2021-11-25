@@ -14,7 +14,7 @@ jobs:
     env:
       XC_VERSION: ${{ '12.4' }}
       XC_WORKSPACE: ${{ 'ImplementTestCase.xcworkspace' }}
-      XC_SCHEME: ${{ 'ImplementTestCaseTests' }}
+      XC_SCHEME: ${{ 'ImplementTestCase' }}
       XC_CONFIGURATION: ${{ 'Debug' }}
       XC_ARCHIVE_PATH: ${{ './ImplementTestCase.xcarchive' }}
       XC_EXPORT_PATH: ${{ './artifacts/' }}
