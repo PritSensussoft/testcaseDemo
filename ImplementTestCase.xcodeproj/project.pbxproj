@@ -12,6 +12,7 @@
 		4FAC72B65D2C5ADA1D365D87 /* Pods_ImplementTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5586A22841FCC52E1D57EBCC /* Pods_ImplementTestCase.framework */; };
 		8803C630274BA1B2001B08FF /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8803C62F274BA1B2001B08FF /* ExportOptions.plist */; };
 		8837A404272A6D0A0075DD00 /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837A403272A6D0A0075DD00 /* SuccessVC.swift */; };
+		885EF3E7274F71B7000EC1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892953D27290C720077E1C4 /* ViewController.swift */; };
 		8892953A27290C720077E1C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892953927290C720077E1C4 /* AppDelegate.swift */; };
 		8892953C27290C720077E1C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892953B27290C720077E1C4 /* SceneDelegate.swift */; };
 		8892953E27290C720077E1C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892953D27290C720077E1C4 /* ViewController.swift */; };
@@ -436,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				885EF3E7274F71B7000EC1D1 /* ViewController.swift in Sources */,
 				8892955C27290C740077E1C4 /* ImplementTestCaseUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,7 +622,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1EE9B5EC5FB77E2D239A60D4 /* Pods-ImplementTestCase.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "arm64,arm64e,x86_64";
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vinodbhai Kalathiya (484M4FF45J)";
