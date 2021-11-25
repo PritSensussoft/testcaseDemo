@@ -73,7 +73,7 @@ jobs:
     name: Unit test
     env:
       DEVICE: "iPhone 11"
-      UNIT_TEST_TARGET: "ImplementTestCaseTests"
+      UNIT_TEST_TARGET: "ImplementTestCase"
     runs-on: macOS-latest
     steps:
     - name: Checkout project
