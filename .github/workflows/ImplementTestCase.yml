@@ -74,18 +74,10 @@ jobs:
     runs-on: macOS-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
-        with:
-          fetch-depth: 1
-      - name: Set up ssh-agent
-        uses: yakuhzi/action-ssh-agent@v1
-        with:
-          public: ${{ secrets.SSH_PUBLIC_KEY }}
-          private: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Build application
         run: |
-          sudo xcode-select -switch /ImplementTestCase/Xcode_11.app
-          xcodebuild -project ImplementTestCase.xcodeproj -scheme ImplementTestCase -configuration Release -derivedDataPath $HOME/Application build
+         sudo xcode-select -switch /ImplementTestCase/Xcode_11.app
+         xcodebuild -project ImplementTestCase.xcodeproj -scheme ImplementTestCase -configuration Release -derivedDataPath $HOME/Application build
+      
        
 
 
