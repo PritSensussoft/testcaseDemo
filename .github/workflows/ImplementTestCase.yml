@@ -27,7 +27,6 @@ jobs:
       PROVISION_ENCRYPTION_PWD: ${{ secrets.PROVISION_ENCRYPTION_PWD }}
       CERTS_EXPORT_PWD: ${{ secrets.CERTS_EXPORT_PWD }}
       KEYCHAIN: ${{ 'test.keychain' }}
-
     steps:
     - name: Select latest Xcode
       run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
