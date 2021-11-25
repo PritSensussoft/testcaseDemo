@@ -62,7 +62,7 @@ jobs:
         /usr/bin/xcodebuild archive -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -configuration "$XC_CONFIGURATION" -archivePath "$XC_ARCHIVE_PATH" "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN'"
     - name: Archive
       run: |
-        mkdir artifacts
+        mkdir testcase
         /usr/bin/xcodebuild archive -workspace "$XC_TESTCASE" -scheme "$XC_SCHEME" -configuration "$XC_CONFIGURATION" -archivePath "$XC_ARCHIVE_PATH" "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN'"
     - name: Export ipa
       run: |
