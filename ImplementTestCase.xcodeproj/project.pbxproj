@@ -12,7 +12,6 @@
 		4FAC72B65D2C5ADA1D365D87 /* Pods_ImplementTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5586A22841FCC52E1D57EBCC /* Pods_ImplementTestCase.framework */; };
 		8803C630274BA1B2001B08FF /* ExportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8803C62F274BA1B2001B08FF /* ExportOptions.plist */; };
 		8837A404272A6D0A0075DD00 /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837A403272A6D0A0075DD00 /* SuccessVC.swift */; };
-		888246EB274E672F0023C9AE /* ImplementTestCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892955027290C740077E1C4 /* ImplementTestCaseTests.swift */; };
 		8892953A27290C720077E1C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892953927290C720077E1C4 /* AppDelegate.swift */; };
 		8892953C27290C720077E1C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892953B27290C720077E1C4 /* SceneDelegate.swift */; };
 		8892953E27290C720077E1C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892953D27290C720077E1C4 /* ViewController.swift */; };
@@ -419,7 +418,6 @@
 			files = (
 				8837A404272A6D0A0075DD00 /* SuccessVC.swift in Sources */,
 				8892953E27290C720077E1C4 /* ViewController.swift in Sources */,
-				888246EB274E672F0023C9AE /* ImplementTestCaseTests.swift in Sources */,
 				8892953A27290C720077E1C4 /* AppDelegate.swift in Sources */,
 				8892953C27290C720077E1C4 /* SceneDelegate.swift in Sources */,
 			);
@@ -575,6 +573,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -621,6 +620,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1EE9B5EC5FB77E2D239A60D4 /* Pods-ImplementTestCase.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "arm64,arm64e,x86_64";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Vinodbhai Kalathiya (484M4FF45J)";
@@ -670,6 +670,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImplementTestCaseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
