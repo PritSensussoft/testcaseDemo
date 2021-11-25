@@ -52,6 +52,16 @@ jobs:
           UUID=`/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i ./$PROVISION)`
           cp "./$PROVISION" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision"
         done
+        steps:
+    - uses: actions/checkout@v2
+    - uses: fwal/setup-swift@d43a564349d1341cd990cfbd70d94d63b8899475
+      with:
+        swift-version: "5.3.3"
+    - name: Build
+      run: swift build
+    - name: Run tests
+      run: swift test
+
     - uses: actions/checkout@v2
     - name: Force Xcode 11
       run: sudo xcode-select -switch /Applications/Xcode_$XC_VERSION.app
@@ -69,21 +79,5 @@ jobs:
        name: Artifacts
        path: ./artifacts
        
-  unit_test:
-    name: Unit test
-    env:
-      DEVICE: "iPhone 11"
-      UNIT_TEST_TARGET: "ImplementTestCase"
-    runs-on: macOS-latest
-    steps:
-    - name: Checkout project
-      uses: actions/checkout@v1
-    - name: Run unit tests
-      run: |
-        run: swift test
-    - name: Upload test logs
-      uses: actions/upload-artifact@v1
-      with:
-        name: TestLogs
-        path: DerivedData/Logs/Test
+
 
