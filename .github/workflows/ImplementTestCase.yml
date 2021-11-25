@@ -52,12 +52,18 @@ jobs:
           UUID=`/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i ./$PROVISION)`
           cp "./$PROVISION" "$HOME/Library/MobileDevice/Provisioning Profiles/$UUID.mobileprovision"
         done
+    - uses: actions/checkout@v2
+    - name: Force Xcode 11
+      run: sudo xcode-select -switch /Applications/Xcode_$XC_VERSION.app
+    - name: Build
+      run: swift build -v
+    - name: Run tests
+      run: swift test -v
     - name: Archive
       run: |
         mkdir artifacts
         /usr/bin/xcodebuild archive -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -configuration "$XC_CONFIGURATION" -archivePath "$XC_ARCHIVE_PATH" "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN'"
-    - name: Run tests
-      run: swift test -v
+ 
     - name: Export ipa
       run: |
         /usr/bin/xcodebuild -exportArchive -archivePath "$XC_ARCHIVE_PATH" -exportOptionsPlist "$XC_EXPORT_OPTIONS_FILE_PATH" -exportPath "$XC_EXPORT_PATH"
