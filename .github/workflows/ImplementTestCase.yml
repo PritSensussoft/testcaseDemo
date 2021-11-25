@@ -84,8 +84,8 @@ jobs:
           private: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Build application
         run: |
-          sudo xcode-select -switch /Applications/Xcode_11.app
-          xcodebuild -project Application.xcodeproj -scheme Application -configuration Release -derivedDataPath $HOME/Application build
+          sudo xcode-select -switch /ImplementTestCase/Xcode_11.app
+          xcodebuild -project ImplementTestCase.xcodeproj -scheme ImplementTestCase -configuration Release -derivedDataPath $HOME/Application build
        
 
 
