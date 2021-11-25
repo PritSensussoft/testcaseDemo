@@ -71,12 +71,6 @@ jobs:
        name: Artifacts
        path: ./artifacts
        
-  unit_test:
-    name: Release
-    runs-on: macOS-latest
-    steps:
-    - name: Run tests
-      run: swift test
       
        
 
