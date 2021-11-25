@@ -75,8 +75,7 @@ jobs:
       DEVICE: "iPhone 11"
       DERIVED_DATA_PATH: "DerivedData"
       UNIT_TEST_TARGET: "ActionsTests"
-    runs-on: macOS-latest
-    needs: build
+    runs-on: [macos-10.15]
     steps:
     - name: Checkout project
       uses: actions/checkout@v1
