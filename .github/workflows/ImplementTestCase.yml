@@ -70,24 +70,22 @@ jobs:
        path: ./artifacts
        
   unit_test:
-    name: Unit test
-    env:
-      DEVICE: "iPhone 11"
-      DERIVED_DATA_PATH: "DerivedData"
-      UNIT_TEST_TARGET: "ActionsTests"
+    name: Release
     runs-on: macOS-latest
-    needs: build
     steps:
-    - name: Checkout project
-      uses: actions/checkout@v1
-    - name: Run unit tests
-      run: |
-        set -o pipefail && xcodebuild test-without-building -xctestrun $(find . -type f -name "*.xctestrun") -destination "platform=iOS Simulator,name=$DEVICE" -derivedDataPath $DERIVED_DATA_PATH -enableCodeCoverage YES -only-testing:$UNIT_TEST_TARGET | xcpretty --color --simple
-    - name: Upload test logs
-      uses: actions/upload-artifact@v1
-      with:
-        name: TestLogs
-        path: DerivedData/Logs/Test
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+      - name: Set up ssh-agent
+        uses: yakuhzi/action-ssh-agent@v1
+        with:
+          public: ${{ secrets.SSH_PUBLIC_KEY }}
+          private: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Build application
+        run: |
+          sudo xcode-select -switch /Applications/Xcode_11.app
+          xcodebuild -project Application.xcodeproj -scheme Application -configuration Release -derivedDataPath $HOME/Application build
        
 
 
