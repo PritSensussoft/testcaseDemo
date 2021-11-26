@@ -60,9 +60,7 @@ jobs:
       run: |
         mkdir artifacts
         /usr/bin/xcodebuild archive -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -configuration "$XC_CONFIGURATION" -archivePath "$XC_ARCHIVE_PATH" "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN'"
-    - name: Run Unit and UI Tests
-      run: |
-        /usr/bin/xcodebuild clean test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 11'
+    
     - name: Export ipa
       run: |
         /usr/bin/xcodebuild -exportArchive -archivePath "$XC_ARCHIVE_PATH" -exportOptionsPlist "$XC_EXPORT_OPTIONS_FILE_PATH" -exportPath "$XC_EXPORT_PATH"
@@ -71,6 +69,19 @@ jobs:
       with:
        name: Artifacts
        path: ./artifacts
+     
+  runtest:
+     runs-on: [macos-10.15]
+    
+     env:
+        XC_WORKSPACE: ${{ 'ImplementTestCase.xcworkspace' }}
+        XC_SCHEME: ${{ 'ImplementTestCase' }}
+        
+     steps:
+     - name: Run Unit and UI Tests
+       run: |
+        /usr/bin/xcodebuild clean test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 11'
+
        
       
        
