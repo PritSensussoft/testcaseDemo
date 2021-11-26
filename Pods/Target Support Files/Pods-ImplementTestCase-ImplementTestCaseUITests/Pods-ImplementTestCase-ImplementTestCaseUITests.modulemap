@@ -1,6 +1,0 @@
-framework module Pods_ImplementTestCase_ImplementTestCaseUITests {
-  umbrella header "Pods-ImplementTestCase-ImplementTestCaseUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

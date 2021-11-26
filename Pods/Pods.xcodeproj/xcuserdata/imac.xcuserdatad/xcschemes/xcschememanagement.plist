@@ -9,20 +9,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ImplementTestCase-ImplementTestCaseUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<true/>
-		</dict>
 		<key>Pods-ImplementTestCase.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>Pods-ImplementTestCaseTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

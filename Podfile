@@ -9,10 +9,7 @@ target 'ImplementTestCase' do
 
   target 'ImplementTestCaseTests' do
     inherit! :search_paths
-    # Pods for testing
-  end
 
-  target 'ImplementTestCaseUITests' do
     # Pods for testing
   end
 	pod 'Alamofire'
