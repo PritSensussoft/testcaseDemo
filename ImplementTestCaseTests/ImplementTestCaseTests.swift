@@ -8,19 +8,21 @@ class ImplementTestCaseTests: XCTestCase {
     //MARK:- TestCase Implement
     
     override func setUpWithError() throws {
-        continueAfterFailure = true
+        continueAfterFailure = false
     }
     
-    func testExample() throws {
-        
+    override func tearDown() {
+        super.tearDown()
     }
     
-    func testemailEmpty() throws{
-        let  result = vc.validLoginInput(email: "abc@gmail.com.uk", password: "Aa@12345")
+    
+    
+    func testemailEmpty() {
+        let  result = vc.validLoginInput(email: "", password: "Aa@12345")
         XCTAssertFalse(result)
     }
     
-    func testemailInvalid() throws{
+    func testemailInvalid() {
         let  result = vc.validLoginInput(email: "abc", password: "Aa@12345")
         XCTAssertFalse(result)
     }
@@ -51,7 +53,7 @@ class ImplementTestCaseTests: XCTestCase {
     }
     
     func testLoginValid(){
-        let  result = vc.validLoginInput(email: "abc@gmail.com", password: "Aaaa@12345")
+        let  result = vc.validLoginInput(email: "abc@gmail.com", password: "")
         XCTAssertTrue(result)
     }
 }
