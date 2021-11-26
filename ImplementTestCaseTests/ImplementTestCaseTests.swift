@@ -53,7 +53,7 @@ class ImplementTestCaseTests: XCTestCase {
     }
     
     func testLoginValid(){
-        let  result = vc.validLoginInput(email: "abc@gmail.com", password: "")
+        let  result = vc.validLoginInput(email: "abc@gmail.com", password: "Aaaa@12345")
         XCTAssertTrue(result)
     }
 }
