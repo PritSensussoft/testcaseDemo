@@ -6,9 +6,15 @@ class ImplementTestCaseTests: XCTestCase {
     var vc = ViewController()
     
     //MARK:- TestCase Implement
+    
+    override func setUpWithError() throws {
+        continueAfterFailure = false
+    }
+    func testExample() throws {
+        XCTAssert(true,"pass")
 
     func testemailEmpty(){
-        let  result = vc.validLoginInput(email: "", password: "Aa@12345")
+        let  result = vc.validLoginInput(email: "abc@gmail.com.uk", password: "Aa@12345")
         XCTAssertFalse(result)
     }
     
