@@ -28,6 +28,7 @@ jobs:
       PROVISION_ENCRYPTION_PWD: ${{ secrets.PROVISION_ENCRYPTION_PWD }}
       CERTS_EXPORT_PWD: ${{ secrets.CERTS_EXPORT_PWD }}
       KEYCHAIN: ${{ 'test.keychain' }}
+       - DESTINATION="platform=iOS Simulator,OS=12.2,name=iPhone X"
     steps:
     - name: Select latest Xcode
       run: "sudo xcode-select -s /Applications/Xcode_$XC_VERSION.app"
@@ -61,7 +62,8 @@ jobs:
         mkdir artifacts
         /usr/bin/xcodebuild archive -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -configuration "$XC_CONFIGURATION" -archivePath "$XC_ARCHIVE_PATH" "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN'"
     - name: Run Unit and UI Tests
-      run: /usr/bin/xcodebuild clean test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 11,OS=11.2'
+     
+      run: /usr/bin/xcodebuild clean test -project "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination "$DESTINATION" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
     - name: Export ipa
       run: |
         /usr/bin/xcodebuild -exportArchive -archivePath "$XC_ARCHIVE_PATH" -exportOptionsPlist "$XC_EXPORT_OPTIONS_FILE_PATH" -exportPath "$XC_EXPORT_PATH"
