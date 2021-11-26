@@ -13,12 +13,12 @@ class ImplementTestCaseTests: XCTestCase {
     func testExample() throws {
         XCTAssert(true,"pass")
     }
-    func testemailEmpty(){
+    func testemailEmpty() throws{
         let  result = vc.validLoginInput(email: "abc@gmail.com.uk", password: "Aa@12345")
         XCTAssertFalse(result)
     }
     
-    func testemailInvalid(){
+    func testemailInvalid() throws{
         let  result = vc.validLoginInput(email: "abc", password: "Aa@12345")
         XCTAssertFalse(result)
     }
