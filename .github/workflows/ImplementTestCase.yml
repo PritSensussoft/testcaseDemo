@@ -62,7 +62,7 @@ jobs:
         /usr/bin/xcodebuild archive -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -configuration "$XC_CONFIGURATION" -archivePath "$XC_ARCHIVE_PATH" "OTHER_CODE_SIGN_FLAGS=--keychain '$KEYCHAIN'"
     - name: Run Unit and UI Tests
       run: |
-        /usr/bin/xcodebuild clean test -workspace "$XC_WORKSPACE" -scheme “$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.2'
+        /usr/bin/xcodebuild clean test -workspace "$XC_WORKSPACE" -scheme "$XC_SCHEME" -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.2'
     - name: Export ipa
       run: |
         /usr/bin/xcodebuild -exportArchive -archivePath "$XC_ARCHIVE_PATH" -exportOptionsPlist "$XC_EXPORT_OPTIONS_FILE_PATH" -exportPath "$XC_EXPORT_PATH"
