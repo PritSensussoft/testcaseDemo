@@ -8,11 +8,13 @@ class ImplementTestCaseTests: XCTestCase {
     //MARK:- TestCase Implement
     
     override func setUpWithError() throws {
-        continueAfterFailure = false
+        continueAfterFailure = true
     }
+    
     func testExample() throws {
-        XCTAssert(true,"pass")
+        
     }
+    
     func testemailEmpty() throws{
         let  result = vc.validLoginInput(email: "abc@gmail.com.uk", password: "Aa@12345")
         XCTAssertFalse(result)
